@@ -1,4 +1,4 @@
-package graphics;// Canvas + Click
+package resources;// Canvas + Click
 
 import javax.swing.*;
 import java.awt.*;

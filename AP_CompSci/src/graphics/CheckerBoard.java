@@ -1,6 +1,7 @@
 package graphics;
 
 import java.awt.Color;
+import resources.Canvas;
 
 public class CheckerBoard {
 	public static void main (String [] args) {

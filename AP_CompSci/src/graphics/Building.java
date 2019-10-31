@@ -2,6 +2,7 @@ package graphics;
 
 import java.awt.Color;
 import java.util.Random;
+import resources.Canvas;
 
 public class Building {
 	

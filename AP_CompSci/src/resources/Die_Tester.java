@@ -1,4 +1,4 @@
-package misc_classes;
+package resources;
 
 public class Die_Tester {
 	public static void main (String [] args) {

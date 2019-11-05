@@ -1,4 +1,4 @@
-package intro_to_classes;
+package resources;
 
 import java.util.Random;
 
@@ -9,7 +9,7 @@ public class FishClass {
 	Random r = new Random();
 	private String name;
 	
-	FishClass(){
+	public FishClass(){
 		weight = 1;
 		numberScales = 40;
 		name = "fishy";
@@ -18,7 +18,7 @@ public class FishClass {
 		weight = wei;
 		name = "fishy";
 	}
-	FishClass(double wei, String Name){
+	public FishClass(double wei, String Name){
 		weight = wei;
 		name = Name;
 	}

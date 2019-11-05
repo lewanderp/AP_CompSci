@@ -1,5 +1,7 @@
 package intro_to_classes;
 
+import resources.FishClass;
+
 public class FishTester {
 	public static void main (String [] args) {
 		FishClass mFish = new FishClass();

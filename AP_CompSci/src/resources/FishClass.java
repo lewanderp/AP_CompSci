@@ -14,7 +14,7 @@ public class FishClass {
 		numberScales = 40;
 		name = "fishy";
 	}
-	FishClass(double wei){
+	public FishClass(double wei){
 		weight = wei;
 		name = "fishy";
 	}

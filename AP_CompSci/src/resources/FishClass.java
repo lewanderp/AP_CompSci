@@ -51,4 +51,7 @@ public class FishClass {
 	public String getName() {
 		return name;
 	}
+	public String toString() {
+		return "Name:  "  +getName() + ", Number Scales: " + getNumScales() + ", Wieght: " + getWeight();
+	}
 }

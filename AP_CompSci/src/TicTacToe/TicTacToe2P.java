@@ -1,4 +1,4 @@
-package chapter7;
+package TicTacToe;
 
 public class TicTacToe2P {
 	@SuppressWarnings("unused")

@@ -1,4 +1,4 @@
-package chapter7;
+package TicTacToe;
 import java.awt.Color;
 import java.awt.Point;
 import resources.Canvas;
@@ -168,7 +168,6 @@ public class TicTacToe {
 			y1cor = 405;
 		}
 		if (box[x][y].filled) {
-			System.out.println("Howdy");
 			return;
 		}
 		box[x][y].setFilled(true);

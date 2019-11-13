@@ -1,4 +1,4 @@
-package chapter7;
+package TicTacToe;
 
 public class TicTacToe1P {
 	public static void main (String [] args) {

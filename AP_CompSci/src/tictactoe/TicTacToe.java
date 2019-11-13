@@ -1,7 +1,8 @@
-package TicTacToe;
+package tictactoe;
 import java.awt.Color;
 import java.awt.Point;
 import resources.Canvas;
+
 import java.util.Random;
 
 public class TicTacToe {

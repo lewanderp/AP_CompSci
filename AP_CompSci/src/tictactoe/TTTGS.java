@@ -1,4 +1,4 @@
-package TicTacToe;
+package tictactoe;
 
 public class TTTGS {
 	

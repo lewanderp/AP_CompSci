@@ -1,4 +1,4 @@
-package chapter7;
+package arrays_and_array_lists;
 
 public class Array1 {
 	public static void main (String [] args) {

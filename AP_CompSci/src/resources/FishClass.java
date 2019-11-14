@@ -4,6 +4,7 @@ import java.util.Random;
 
 public class FishClass {
 	
+	private static final double EPSILON = 0.00001; 
 	private int numberScales;
 	private double weight;
 	Random r = new Random();
@@ -46,12 +47,27 @@ public class FishClass {
 		numberScales-=r.nextInt(35);
 	}
 	public void setName(String Name) {
-		name = Name;
+		name = Name; 
 	}
 	public String getName() {
-		return name;
+		return name; 
 	}
 	public String toString() {
 		return "Name:  "  +getName() + ", Number Scales: " + getNumScales() + ", Wieght: " + getWeight();
+	}
+	public boolean equals(FishClass f) {
+		boolean isEqual = false;
+		
+		if (f.getNumScales() == this.getNumScales() && doubleEquals(f.getWeight(), this.getWeight()) && f.getName().contentEquals(this.getName())) {
+			isEqual = true;
+		}
+		
+		return isEqual;
+	}
+	private boolean doubleEquals(double a, double b) {
+		if (Math.abs(a-b) < EPSILON) {
+			return true;
+		}
+		return false;
 	}
 }

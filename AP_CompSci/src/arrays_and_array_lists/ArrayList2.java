@@ -26,10 +26,8 @@ public class ArrayList2 {
 		fsh.set(r.nextInt(fsh.size()), fsh.get(r.nextInt(3)));
 		//Printing it all
 		for (int i = 0 ; i<fsh.size(); i++) {
-			System.out.println("Fish " + i);
-			System.out.println("Weight: " + fsh.get(i).getWeight());
-			System.out.println("Name: " + fsh.get(i).getName());
-			System.out.println("Scales: " + fsh.get(i).getNumScales());
+			System.out.println("Fish"+i+" : " + fsh.get(i).toString());
 		}
+		
 	}
 }

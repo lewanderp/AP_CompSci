@@ -13,6 +13,7 @@ public class TicTacToe {
 	public int turnCounter = 1;
 	boolean won;
 	boolean vsComputer;
+	RoboPlayer robo = new RoboPlayer(box);
 	
 	public TicTacToe(boolean VScomputer) {
 		vsComputer = VScomputer;
@@ -145,8 +146,8 @@ public class TicTacToe {
 		}
 		int x1cor = r.nextInt(3)*100+100;
 		int y1cor = r.nextInt(3)*100+100;
-		int x = -1;
-		int y = -1;
+		int x = robo.whichPlayX();
+		int y = robo.whichPlayY();
 		
 		if (x1cor < 200) {
 			x = 0;

@@ -58,5 +58,8 @@ public class Rational {
 	private double gcd(Rational frac2) {
 		return this.getDenominator()*frac2.getDenominator();
 	}
+	public static int getOperationalNumber() {
+		return operationalNumber;
+	}
 }
 

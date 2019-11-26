@@ -1,10 +1,7 @@
 package chapter8;
 
-import java.util.Random;
-
 public class RationalTester {
 	public static void main (String [] args) {
-		Random r = new Random();
 		Rational f1 = new Rational(3,4);
 		Rational f2 = new Rational(1,3);
 		System.out.println("f1: " + f1.toString());

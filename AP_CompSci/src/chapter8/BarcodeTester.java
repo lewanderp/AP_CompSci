@@ -5,6 +5,7 @@ import java.util.Scanner;
 public class BarcodeTester {
 	public static void main(String [] args) {
 		
+		@SuppressWarnings("resource")
 		Scanner in = new Scanner(System.in);
 		int [] zipcode = new int [5];
 		String [] barcode = new String [5];

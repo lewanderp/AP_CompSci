@@ -29,5 +29,6 @@ public class VegetableTester {
 		} else {
 			System.out.println(v3.getName()	+ " is the same weight as " + v2.getName());
 		}
+		
 	}
 }

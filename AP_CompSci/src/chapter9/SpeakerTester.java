@@ -22,5 +22,11 @@ package chapter9;
       System.out.println (  ((Singer)thing).getAge() );
       System.out.println (  ((Singer)thing).getType() ); 
       
+      Speaker veg = new Vegetable("Potato", 20);
+      veg.speak();
+      
+      System.out.println(	((Vegetable)veg).getName());
+      System.out.println(	((Vegetable)veg).getWeight());
+      
    }
 }

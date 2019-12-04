@@ -1,7 +1,7 @@
 package chapter9;
 
 @SuppressWarnings("rawtypes")
-public class Vegetable implements Comparable {
+public class Vegetable implements Comparable, Speaker {
 	
 	private double weight;
 	private String name;
@@ -31,5 +31,8 @@ public class Vegetable implements Comparable {
 		} else {
 			return 0;
 		}
+	}
+	public void speak() {
+		System.out.println("kill the zombies!");
 	}
 }

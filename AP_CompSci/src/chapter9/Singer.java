@@ -1,6 +1,5 @@
 package chapter9;
 
-
 public class Singer implements Speaker
 {
     private int age;

@@ -1,6 +1,8 @@
 package chapter8;
 
-public class Rational {
+
+@SuppressWarnings("rawtypes")
+public class Rational implements Comparable {
 	
 	private double numerator;
 	private double denominator;
@@ -60,6 +62,17 @@ public class Rational {
 	}
 	public static int getOperationalNumber() {
 		return operationalNumber;
+	}
+	public int compareTo(Object obj) {
+		double otherNum = ((Rational)obj).getNumerator()/((Rational)obj).getDenominator();
+		double thisNum = this.getNumerator()/this.getDenominator();
+		if (thisNum < otherNum) {
+			return -1;
+		} else if (thisNum > otherNum) {
+			return 1;
+		} else {
+			return 0;
+		}
 	}
 }
 

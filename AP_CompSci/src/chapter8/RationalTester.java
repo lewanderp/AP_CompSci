@@ -10,5 +10,13 @@ public class RationalTester {
 		System.out.println("f1 - f2" + f1.subtract(f2).toString());
 		System.out.println("f1 * f2" + f1.multiply(f2).toString());
 		System.out.println("f1 / f2" + f1.divide(f2).toString());
+		System.out.println("Which has higher value: ");
+		if (f1.compareTo(f2) == 1) {
+			System.out.println("f1");
+		} else if (f1.compareTo(f2) == -1) {
+			System.out.println("f1");
+		} else {
+			System.out.println("Equal value");
+		}
 	}
 }	

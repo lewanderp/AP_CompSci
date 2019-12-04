@@ -2,7 +2,8 @@ package chapter8;
 
 import java.util.ArrayList;
 
-public class Purse {
+@SuppressWarnings("rawtypes")
+public class Purse implements Comparable {
 	
 	private ArrayList<Coin> coins = new ArrayList<>();
 	private double value;
@@ -27,5 +28,15 @@ public class Purse {
 	}
 	public double getAvrg() {
 		return value/numCoins;
+	}
+	public int compareTo(Object obj) {
+		double otherNum = ((Purse)obj).getValue();
+		if (value < otherNum) {
+			return -1;
+		} else if (value > otherNum) {
+			return 1;
+		} else {
+			return 0;
+		}
 	}
 }

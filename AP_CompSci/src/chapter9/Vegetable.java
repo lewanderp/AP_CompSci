@@ -1,7 +1,7 @@
 package chapter9;
 
 @SuppressWarnings("rawtypes")
-public class Vegetable implements Comparable, Speaker {
+public class Vegetable implements Comparable, Speaker, Measurable {
 	
 	private double weight;
 	private String name;
@@ -34,5 +34,9 @@ public class Vegetable implements Comparable, Speaker {
 	}
 	public void speak() {
 		System.out.println("kill the zombies!");
+	}
+	@Override
+	public double getMeasure() {
+		return weight;
 	}
 }

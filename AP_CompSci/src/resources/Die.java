@@ -2,7 +2,9 @@ package resources;
 
 import java.util.Random;
 
-public class Die {
+import chapter9.Measurable;
+
+public class Die implements Measurable{
 	
 	public static int diceInPlay = 0;
 	
@@ -10,12 +12,12 @@ public class Die {
 	private int value;
 	private Random r = new Random();
 	
-	Die(){
+	public Die(){
 		faces = 6;
 		roll();
 		diceInPlay++;
 	}
-	Die(int numSides){
+	public Die(int numSides){
 		faces = numSides;
 		roll();
 		diceInPlay++;
@@ -38,5 +40,11 @@ public class Die {
 		int sum = add2Die(d1);
 		sum += d2.getValue();
 		return sum;
+	}
+	public double getMeasure() {
+		return value;
+	}
+	public String toString() {
+		return ""+value+"";
 	}
 }

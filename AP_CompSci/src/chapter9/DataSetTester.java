@@ -17,11 +17,11 @@ public class DataSetTester
 
       System.out.println("Average balance: " 
             + bankData.getAverage());
-     // System.out.println("Expected: 4000");
+      // System.out.println("Expected: 4000");
       Measurable max = bankData.getMaximum();
       System.out.println("Highest balance: " 
          + max.getMeasure());
-     // System.out.println("Expected: 10000");
+      // System.out.println("Expected: 10000");
       System.out.println("Lowest balance: " + bankData.getMinimum());
       
       
@@ -33,14 +33,14 @@ public class DataSetTester
 
       System.out.println("Average coin value: " 
             + coinData.getAverage());
-     // System.out.println("Expected: 0.133");            
+      // System.out.println("Expected: 0.133");            
       max = coinData.getMaximum();
       System.out.println("Highest coin value: " 
             + max.getMeasure());
-     // System.out.println("Expected: 0.25");  
+      // System.out.println("Expected: 0.25");  
       System.out.println("Lowest coin value: " + coinData.getMinimum());
       
-     // Vegetable DataSet
+      // Vegetable DataSet
       DataSet vegetableData = new DataSet();
       
       vegetableData.add(new Vegetable("Root", 10));
@@ -51,7 +51,7 @@ public class DataSetTester
       System.out.println("Highest vegetable weight: " + vegetableData.getMaximum());
       System.out.println("Lowest vegetable weight: " + vegetableData.getMinimum());
       
-     //Die Data Set
+      //Die Data Set
       
       DataSet dieData = new DataSet();
       
@@ -63,6 +63,16 @@ public class DataSetTester
       System.out.println("Highest die value: " + dieData.getMaximum());
       System.out.println("Lowest die value: " + dieData.getMinimum());
       
+      //Person Datat set
       
+      DataSet personData = new DataSet();
+      
+      personData.add(new Person("John", 70));
+      personData.add(new Person("Suzy", 53));
+      personData.add(new Person("HUMAN", 67));
+      
+      System.out.println("Average human height: " + personData.getAverage());
+      System.out.println("Highest human height: " + personData.getMaximum());
+      System.out.println("Lowest human height: " + personData.getMinimum());
    }
 }

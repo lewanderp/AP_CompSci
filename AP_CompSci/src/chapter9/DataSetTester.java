@@ -63,7 +63,7 @@ public class DataSetTester
       System.out.println("Highest die value: " + dieData.getMaximum());
       System.out.println("Lowest die value: " + dieData.getMinimum());
       
-      //Person Datat set
+      //Person Data set
       
       DataSet personData = new DataSet();
       

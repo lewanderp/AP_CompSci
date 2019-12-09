@@ -18,4 +18,19 @@ public class Person implements Measurable{
 	public String toString() {
 		return name + " is " + height + "''  tall"; 
 	}
+	@Override
+	public double getMaximum() { 
+		// TODO Auto-generated method stub
+		return 0;
+	}
+	@Override
+	public double getMinimum() {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+	@Override
+	public double getAverage() {
+		// TODO Auto-generated method stub
+		return 0;
+	}
 }

@@ -47,6 +47,8 @@ public class DataSetTester
       vegetableData.add(new Vegetable("Leaf", 4));
       vegetableData.add(new Vegetable("Stem", 8));
       
+      max = vegetableData.getMaximum();
+      
       System.out.println("Average vegetable weight: " + vegetableData.getAverage());
       System.out.println("Highest vegetable weight: " + vegetableData.getMaximum());
       System.out.println("Lowest vegetable weight: " + vegetableData.getMinimum());
@@ -59,6 +61,8 @@ public class DataSetTester
       dieData.add(new Die(20));
       dieData.add(new Die(20));
       
+      max = dieData.getMaximum();
+      
       System.out.println("Average die value: " + dieData.getAverage());
       System.out.println("Highest die value: " + dieData.getMaximum());
       System.out.println("Lowest die value: " + dieData.getMinimum());
@@ -70,6 +74,8 @@ public class DataSetTester
       personData.add(new Person("John", 70));
       personData.add(new Person("Suzy", 53));
       personData.add(new Person("HUMAN", 67));
+      
+      max = personData.getMaximum();
       
       System.out.println("Average human height: " + personData.getAverage());
       System.out.println("Highest human height: " + personData.getMaximum());

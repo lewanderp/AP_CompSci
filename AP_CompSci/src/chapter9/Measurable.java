@@ -10,4 +10,7 @@ public interface Measurable
       @return the measure
    */
    double getMeasure();
+   double getMaximum();
+   double getMinimum();
+   double getAverage();
 }

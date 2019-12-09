@@ -2,20 +2,16 @@ package chapter8;
 
 public class Barcode {
 	
-	private int [] zip = new int [5];
-	private String [] bar = new String [5];
+	private int [] zip;
+	private String [] bar;
 	
 	public Barcode(int [] code) {
 		this.preconditionsInt(code);
-		for(int i = 0; i<5; i++) {
-			zip[i] = code[i];
-		}
+		zip = code;
 	}
 	public Barcode(String [] code) {
 		this.preconditionsString(code);
-		for(int i = 0; i<5; i++) {
-			
-		}
+		bar = code;
 	}
 	public String toBar() {
 		String toPrint = "|";
@@ -27,6 +23,18 @@ public class Barcode {
 	}
 	public String toNum() {
 		String toPrint = "";
+//		if (bar[0].charAt(0) != '|') {
+//			throw new IllegalArgumentException("No begining bar");
+//		} else if ( bar[bar.length-1].charAt(bar[bar.length-1].length()-1) != '|') {
+//			throw new IllegalArgumentException("No ending bar"); 
+//		}
+		String barcode [] = bar;
+		barcode [0] = barcode[0].substring(1, barcode[1].length()-1);
+		barcode	[4] = barcode [4].substring(0, barcode[4].length()-2);
+		System.out.println(barcode[0] + "   " + barcode[4]);
+		for(int i = 0 ; i< 5; i++) {
+			
+		}
 		for (int i = 0; i < 5; i++) {
 			toPrint = toPrint+this.barToNum(bar[i]);
 		}
@@ -69,6 +77,9 @@ public class Barcode {
 	}
 	@SuppressWarnings("unused")
 	private int barToNum(String toNum) {
+		if (toNum.length() > 5) {
+			throw new IllegalArgumentException("toNum must be 5 char long");
+		}
 		switch (toNum) {
 		case ":::||":
 			return 1;

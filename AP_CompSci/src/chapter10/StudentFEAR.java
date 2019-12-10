@@ -1,4 +1,4 @@
-package chapter9;
+package chapter10;
 
 public class StudentFEAR extends Student {
 	

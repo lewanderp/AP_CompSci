@@ -1,4 +1,4 @@
-package chapter9;
+package chapter10;
 
 public class EmployeeTester {
 	public static void main (String [] args) {

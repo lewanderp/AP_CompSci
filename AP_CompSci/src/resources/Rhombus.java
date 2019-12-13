@@ -14,7 +14,7 @@ public class Rhombus extends Shape {
 	public int compareTo(Object o) {
 		double a = ((Rhombus)((Object)o)).calcArea();
 		if (calcArea() > a) {
-			return 1;
+			return 1;  
 		} else if (calcArea() > a) {
 			return 0;
 		} else {

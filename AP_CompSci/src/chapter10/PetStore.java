@@ -5,7 +5,7 @@ package chapter10;
  * Two subclasses: Snake and Cat which extend Pet
  */
 
-public class PetStore
+public class PetStore 
 {    
     public static void main(String[]args)
    { 

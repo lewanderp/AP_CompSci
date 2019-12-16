@@ -32,5 +32,9 @@ public class Triangle extends Shape {
 	public double calcPerimeter() {
 		return s1+s2+s3;
 	}
+	@Override
+	public String toString() {
+		return "Side1: "+ s1 + ", Side2: "+ s2 + ", Side3: "+ s3 + ", Area: " + calcArea() + ", Perimeter: " + calcPerimeter();
+	}
 
 }

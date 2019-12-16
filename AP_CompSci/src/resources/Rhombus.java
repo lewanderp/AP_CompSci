@@ -32,4 +32,9 @@ public class Rhombus extends Shape {
 		return 2*Math.sqrt(d1*d1+d2*d2);
 	}
 
+	@Override
+	public String toString() {
+		return "Diagonal1:" + d1 + ", Diagonal2: " + d2 + ", Area: " + calcArea() + ", Perimeter: " + calcPerimeter();
+	}
+
 }

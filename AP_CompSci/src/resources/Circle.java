@@ -29,5 +29,9 @@ public class Circle extends Shape {
 	public double getRadius() {
 		return radius;
 	}
+	@Override
+	public String toString() {
+		return "Radius: " +getRadius()+ "Area: " + calcArea() + ", Perimeter: " + calcPerimeter();
+	}
 	
 }

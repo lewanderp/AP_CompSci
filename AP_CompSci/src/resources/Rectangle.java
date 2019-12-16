@@ -28,4 +28,8 @@ public class Rectangle extends Shape {
 	public double calcPerimeter() {
 		return 2*length+2*width;
 	}
+	@Override
+	public String toString() {
+		return "Length: " + length + ", Width: " + width + ", Area: " + calcArea() + ", Perimeter: " + calcPerimeter();
+	}
 }

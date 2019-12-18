@@ -1,17 +1,17 @@
 package resources;
 
-public class Rectangle extends Shape {
+public class Rectangle1 extends Shape1 {
 	
 	private double length;
 	private double width;
 	
-	public Rectangle(double l, double w) {
+	public Rectangle1(int l, int w, int width2, int height) {
 		length = l;
 		width = w;
 	}
 	@Override
 	public int compareTo(Object o) {
-		double a = ((Rectangle) ((Object)o)).calcArea();
+		double a = ((Rectangle1) ((Object)o)).calcArea();
 		if (calcArea() > a) {
 			return 1;
 		} else if ( calcArea() == a ) {

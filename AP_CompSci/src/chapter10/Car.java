@@ -12,11 +12,13 @@ public class Car extends Vehicle {
 
 	@Override
 	public void DrawVehicle() {
-		this.getCanvas().setInkColor(Color.cyan);
-		this.getCanvas().drawFilledRectangle(this.getX(), this.getY(), 50, 10);
-		this.getCanvas().drawFilledRectangle(this.getX()+10, this.getY()-10, 40, 10);
-		this.getCanvas().drawFilledOval(this.getX(), this.getY()+10, 10, 10);
-		this.getCanvas().drawFilledOval(this.getX(), this.getY()+10, 10, 10);
+		getCanvas().setInkColor(Color.cyan);
+		getCanvas().drawFilledRectangle(getX(), getY(), 50, 10);
+		getCanvas().drawFilledRectangle(getX()+15, getY()-10, 25, 10);
+		getCanvas().drawFilledOval(getX()+5, getY()+10, 10, 10);
+		getCanvas().drawFilledOval(getX()+35, getY()+10, 10, 10);
+		getCanvas().setInkColor(Color.black);
+		getCanvas().drawString("CAR", getX()+15, getY());
 	}
 	
 }

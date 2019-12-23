@@ -61,4 +61,22 @@ public class BankAccount implements Measurable
    }
 
    private double balance;
+
+   @Override
+   public double getMaximum() {
+      // TODO Auto-generated method stub
+      return 0;
+   }
+
+   @Override
+   public double getMinimum() {
+      // TODO Auto-generated method stub
+      return 0;
+   }
+
+   @Override
+   public double getAverage() {
+      // TODO Auto-generated method stub
+      return 0;
+   }
 }

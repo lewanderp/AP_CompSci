@@ -1,6 +1,6 @@
 package resources;
 
-public class Circle extends Shape {
+public class Circle extends Shape1 {
 	
 	private double radius;
 	

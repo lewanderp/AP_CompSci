@@ -1,0 +1,11 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - VehicleTester",
+            "request": "launch",
+            "mainClass": "AP_CompSci/chapter10.VehicleTester",
+            "projectName": "AP_CompSci"
+        }
+    ]
+}

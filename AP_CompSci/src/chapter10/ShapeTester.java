@@ -1,19 +1,19 @@
 package chapter10;
 
-import resources.Triangle;
+import resources.Triangle1;
 import resources.Circle;
-import resources.Rectangle;
+import resources.Rectangle1;
 import resources.Rhombus;
 
 public class ShapeTester {
 	public static void main (String [] args) {
 		
-		Triangle t1 = new Triangle(1,3,3);
-		Triangle t2 = new Triangle(1,7,7);
+		Triangle1 t1 = new Triangle1(1,3,3);
+		Triangle1 t2 = new Triangle1(1,7,7);
 		Circle c1 = new Circle(2);
 		Circle c2 = new Circle(2);
-		Rectangle re1 = new Rectangle(2,4);
-		Rectangle re2 = new Rectangle(2,3);
+		Rectangle1 re1 = new Rectangle1(2,4);
+		Rectangle1 re2 = new Rectangle1(2,3);
 		Rhombus rh1 = new Rhombus(3,2);
 		Rhombus rh2 = new Rhombus(3,5);
 		

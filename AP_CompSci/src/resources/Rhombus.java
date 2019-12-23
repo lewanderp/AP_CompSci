@@ -1,6 +1,6 @@
 package resources;
 
-public class Rhombus extends Shape {
+public class Rhombus extends Shape1 {
 	
 	private double d1;
 	private double d2;

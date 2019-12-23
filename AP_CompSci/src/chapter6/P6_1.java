@@ -10,8 +10,8 @@ public class P6_1 {
 		do {
 			System.out.println("Enter the $ value to be converted " );
 			double $val = in.nextDouble();
-		double €val = $val*0.91;
-		System.out.println("$" + $val + " is €" + €val);
+		double Moneyval = $val*0.91;
+		System.out.println("$" + $val + " is E" + Moneyval);
 		System.out.println("Enter Q if you wish to exit");
 		flagVal = in.next();
 		} while (!flagVal.contentEquals("Q"));

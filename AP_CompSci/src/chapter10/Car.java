@@ -4,8 +4,8 @@ import java.awt.Color;
 
 import resources.Canvas;
 
-public class Car extends Vehicle {
-	
+public class Car extends Vehicle { 
+
 	public Car(Canvas C, int xCor, int yCor) {
 		super(C, xCor, yCor);
 	}

@@ -2,6 +2,20 @@
     "configurations": [
         {
             "type": "java",
+            "name": "CodeLens (Launch) - FibonacciRecursive",
+            "request": "launch",
+            "mainClass": "AP_CompSci/chapter11.FibonacciRecursive",
+            "projectName": "AP_CompSci"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - factorial",
+            "request": "launch",
+            "mainClass": "AP_CompSci/chapter11.factorial",
+            "projectName": "AP_CompSci"
+        },
+        {
+            "type": "java",
             "name": "CodeLens (Launch) - CarLotTester",
             "request": "launch",
             "mainClass": "AP_CompSci/chapter10.CarLotTester",

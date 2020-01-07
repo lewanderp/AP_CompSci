@@ -10,5 +10,9 @@ public class baseFromPowerRecursive{
         int pow = in.nextInt();
         System.out.println("Enter base: ");
         int base = in.nextInt();
+        System.out.println("Base: " + calcBase(pow, base));
+    }
+    public static int calcBase(int pow, int base){
+        return 0;
     }
 }

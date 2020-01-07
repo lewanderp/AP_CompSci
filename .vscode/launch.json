@@ -2,6 +2,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "CodeLens (Launch) - baseFromPowerRecursive",
+            "request": "launch",
+            "mainClass": "AP_CompSci/chapter11.baseFromPowerRecursive",
+            "projectName": "AP_CompSci"
+        },
+        {
+            "type": "java",
             "name": "CodeLens (Launch) - FibonacciRecursive",
             "request": "launch",
             "mainClass": "AP_CompSci/chapter11.FibonacciRecursive",

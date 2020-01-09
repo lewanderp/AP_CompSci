@@ -6,16 +6,16 @@ import resources.Canvas;
 public class SerpinskisTriangle {
     public static Canvas c = new Canvas("Serpinski's Triangle");
     public static void main (String [] args) throws InterruptedException {
-        c.setSize(1000, 500);
+        c.setSize(1500, 750);
         c.setVisible(true);
         drawBackground();
-        for(int i = 0; i < 5; i++){
+        for(int i = 0; i < 8; i++){
             drawBackground();
             c.setInkColor(Color.cyan);
-            serpinskisTriangle(i, 400, 300, 500, 100);
+            serpinskisTriangle(i, 200, 600, 750, 50);
             c.setInkColor(Color.white);
             c.setFontSize(20);
-            c.drawString(""+i+1, 10, 20);
+            c.drawString(""+(i+1), 10, 20);
             try {
                 Thread.sleep(1000);
             } catch (Exception e) {
@@ -25,7 +25,7 @@ public class SerpinskisTriangle {
     }
     public static void drawBackground(){
         c.setInkColor(Color.black);
-        c.drawFilledRectangle(0, 0, 1000, 500);
+        c.drawFilledRectangle(0, 0, 1500, 750);
     }
     public static void serpinskisTriangle(int i, int x1, int y1, int x2, int y2){
         c.setInkColor(Color.cyan);

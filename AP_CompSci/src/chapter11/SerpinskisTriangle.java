@@ -9,7 +9,7 @@ public class SerpinskisTriangle {
         c.setSize(1500, 750);
         c.setVisible(true);
         drawBackground();
-        for(int i = 0; i < 8; i++){
+        for(int i = 0; i < 15; i++){
             drawBackground();
             c.setInkColor(Color.cyan);
             serpinskisTriangle(i, 200, 600, 750, 50);

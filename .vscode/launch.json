@@ -2,6 +2,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "CodeLens (Launch) - LineFractal",
+            "request": "launch",
+            "mainClass": "AP_CompSci/chapter11.LineFractal",
+            "projectName": "AP_CompSci"
+        },
+        {
+            "type": "java",
             "name": "CodeLens (Launch) - BaseFromPowerRecursive",
             "request": "launch",
             "mainClass": "AP_CompSci/chapter11.BaseFromPowerRecursive",

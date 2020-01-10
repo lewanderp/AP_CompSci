@@ -6,15 +6,13 @@ public class P13_3{
     public static void main (String [] args){
         @SuppressWarnings("resource")
         Scanner in = new Scanner(System.in);
+        in.useDelimiter("\n");
         System.out.println("Enter a string to be reversed");
         String s = in.next();
-        String toRev = "";
+        String str = "";
         for(int i = 0; i<s.length(); i++){
-            String str = s.charAt(0)+"";
-            toRev = s.substring(1);
-            s = toRev + str;
-            
+            str = str + s.charAt(s.length()-(1+i));
         }   
-        System.out.println(s);
+        System.out.println(str);
     }
 }

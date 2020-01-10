@@ -6,6 +6,7 @@ public class P13_1{
     public static void main (String [] args){
         @SuppressWarnings("resource")
         Scanner in = new Scanner(System.in);
+        in.useDelimiter("\n");
         System.out.println("Enter a string to be reversed");
         String s = in.next();
         System.out.println(reverseSentance(s));

@@ -9,11 +9,11 @@ public class P13_3{
         System.out.println("Enter a string to be reversed");
         String s = in.next();
         String toRev = "";
-        for(int i = 0; i<s.length()/2; i++){
-            String str = s.charAt(i)+"";
+        for(int i = 0; i<s.length(); i++){
+            String str = s.charAt(0)+"";
             toRev = s.substring(1);
-            s = s + toRev + str;
-
+            s = toRev + str;
+            
         }   
         System.out.println(s);
     }

@@ -4,7 +4,7 @@ public class P13_14_Class{
     
     private final char TRIED = '#';
     private final char PATH = '$'; 
-    private char [][] maze  = {{'*',' ','*','*','*','*','*','*','*','*' },
+    public char [][] maze  = {{'*',' ','*','*','*','*','*','*','*','*' },
                                {'*',' ','*',' ',' ',' ',' ',' ',' ','*' },
                                {'*',' ',' ',' ','*','*','*','*','*','*' },
                                {'*','*','*',' ','*',' ','*','*','*','*' },
@@ -22,22 +22,22 @@ public class P13_14_Class{
         boolean done = false;
         if (valid (x,y)){
             maze[x][y] = TRIED;
-            if(x == maze.length-2 && y == maze.length-1){
+            if(x == maze.length-1 && y == maze[0].length-2){
                 done = true;
             } else {
-                done = traverse (x+1, y);
-                if (!done){
-                    done = traverse (x, y+1);
-                }
+                done = traverse (x, y-1);
                 if (!done){
                     done = traverse (x-1, y);
                 }
                 if (!done){
-                    done = traverse (x, y-1);
+                    done = traverse (x, y+1);
+                }
+                if (!done){
+                    done = traverse (x+1, y);
                 }
             }
             if(done){
-                maze[x][y] = '$';
+                maze[x][y] = PATH;
             }
         }
         return done;

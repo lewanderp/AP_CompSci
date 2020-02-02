@@ -12,10 +12,10 @@ public class P13_2{
         System.out.println(reverse(s));
     }
     public static String reverse(String s){ 
-        return reverse(s);
+        return reverse(s, 2, 4);
         //#TODO finish this lol, imaine explain what this does or spelling lol fukin die
     }
-    private String reverse(String s, int st, int en){
+    private static String reverse(String s, int st, int en){
         if (s.length()  == 0){
             return "";
         }

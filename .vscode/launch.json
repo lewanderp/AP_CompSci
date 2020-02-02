@@ -2,6 +2,20 @@
     "configurations": [
         {
             "type": "java",
+            "name": "CodeLens (Launch) - Review2",
+            "request": "launch",
+            "mainClass": "AP_CompSci/chapter14.Review2",
+            "projectName": "AP_CompSci"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - Review1",
+            "request": "launch",
+            "mainClass": "AP_CompSci/chapter14.Review1",
+            "projectName": "AP_CompSci"
+        },
+        {
+            "type": "java",
             "name": "CodeLens (Launch) - P13_2",
             "request": "launch",
             "mainClass": "AP_CompSci/chapter13.P13_2",

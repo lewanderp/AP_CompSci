@@ -2,6 +2,27 @@
     "configurations": [
         {
             "type": "java",
+            "name": "CodeLens (Launch) - CommercialSort",
+            "request": "launch",
+            "mainClass": "AP_CompSci/chapter14.CommercialSort",
+            "projectName": "AP_CompSci"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - SortingArrays",
+            "request": "launch",
+            "mainClass": "AP_CompSci/chapter14.SortingArrays",
+            "projectName": "AP_CompSci"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - SortingArrayLists",
+            "request": "launch",
+            "mainClass": "AP_CompSci/chapter14.SortingArrayLists",
+            "projectName": "AP_CompSci"
+        },
+        {
+            "type": "java",
             "name": "CodeLens (Launch) - Review2",
             "request": "launch",
             "mainClass": "AP_CompSci/chapter14.Review2",

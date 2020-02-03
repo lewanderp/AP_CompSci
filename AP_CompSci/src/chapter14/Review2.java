@@ -95,7 +95,7 @@ public class Review2{
     public static ArrayList<String>[][] breakArrayList(){
         ArrayList <String> b = new ArrayList<>();
         ArrayList <String> c = new ArrayList<>();
-        //TODO research this wierd ass warning
+        // figure what this warning is, its just wierd and i dont like warnings
         ArrayList <String> [][] d = new ArrayList[1][2];
         d[0][0] = b;
         d[0][1] = c;

@@ -2,7 +2,7 @@ package chapter14;
 
 import java.util.Random;
 
-public class Commercial{
+public class Commercial implements Comparable{
 
     private Random r = new Random();
     private String product;
@@ -22,11 +22,15 @@ public class Commercial{
         Commercial c = (Commercial) o;
         if(c.getSales() > this.getSales()){
             return -1;
-        } else if (c.getSales() == this.getSales()){
+        } else if (this.equals(c)){
             return 0;
         } else {
             return 1;
         }
+    }
+    public boolean equals(Commercial c){
+        if (c.getSales() == this.getSales())return true;
+        return false;
     }
     public String toString(){
         return "Product Name: " + product + "; # Sold: " + sales + "; Number of ADs: " + numberADs;

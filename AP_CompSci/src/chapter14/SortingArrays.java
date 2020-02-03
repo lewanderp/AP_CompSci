@@ -12,6 +12,8 @@ public class SortingArrays{
         System.out.println(printA());
         System.out.println("Sorted Array");
         Arrays.sort(ar);
+        System.out.println(printA());
+        System.out.println("Median: " + findMed());
     }
     public static String printA(){
         String s = "";
@@ -21,5 +23,9 @@ public class SortingArrays{
         }
         s+=ar[ar.length-1]+" ]";
         return s;
+    }
+    public static int findMed(){
+        int x = ar[ar.length/2-1];
+        return x;
     }
 }

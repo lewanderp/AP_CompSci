@@ -2,6 +2,7 @@ package chapter14;
 
 import java.util.Random;
 
+@SuppressWarnings("rawtypes")
 public class Commercial implements Comparable{
 
     private Random r = new Random();

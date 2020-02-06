@@ -2,6 +2,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "CodeLens (Launch) - BubbleSort",
+            "request": "launch",
+            "mainClass": "AP_CompSci/chapter14.BubbleSort",
+            "projectName": "AP_CompSci"
+        },
+        {
+            "type": "java",
             "name": "CodeLens (Launch) - CommercialSort",
             "request": "launch",
             "mainClass": "AP_CompSci/chapter14.CommercialSort",

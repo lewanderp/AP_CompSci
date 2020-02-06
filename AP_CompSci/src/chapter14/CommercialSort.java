@@ -18,21 +18,21 @@ public class CommercialSort{
         System.out.println(getMedian());
     }
     public static void initA(){
-        for(int i = 0; i<a.length; i++){
+        for(int i = 0; i<5; i++){
             a[i] = new Commercial("Product: " + (i+1));
             a[i].showCommercial(r.nextInt(20)+1);
         }
     }
     public static String printA(){
         String s = "[ ";
-        for(int i =0; i< a.length-2; i++){
+        for(int i =0; i< 4; i++){
             s+=a[i].toString()+", \n";
         }
-        s+=a[a.length-1].toString()+" ]";
+        s+=a[4].toString()+" ]";
         return s;
     }
     public static Commercial getMedian(){
-        return a[a.length-1];
+        return a[a.length/2];
     }
 
 }

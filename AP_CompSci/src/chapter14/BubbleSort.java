@@ -1,23 +1,20 @@
 package chapter14;
 
-import java.util.Random;
-
 public class BubbleSort{
-    public static Random r = new Random();
-    public static int [] a = new int [10];
-    public static void main (String [] args){
-        initA();
-        bubbleSort();
-        System.out.println(printA());
+    private static int [] a;
+    public BubbleSort (int [] b){
+        initA(b);
     }
 
-    public static void initA(){
-        for(int i =0; i< a.length; i++){
-            a[i] = r.nextInt(50)+1;
-        }
+    private void initA(int[] b){
+        a = b.clone();
     }
 
-    public static String printA(){
+    public int[] getASorted(){
+        return bubbleSort();
+    }
+
+    public String printA(){
         String s = "";
         s+="[ ";
         for(int i =0; i< a.length-2; i++) {
@@ -27,7 +24,7 @@ public class BubbleSort{
         return s;
     }
 
-    public static void bubbleSort(){
+    private int[] bubbleSort(){
 
         boolean isSorted = false;
 
@@ -42,8 +39,9 @@ public class BubbleSort{
                 }
             }
             if(isSorted){
-                break;
+                return a;
             }
         }
+        return a;
     }
 }

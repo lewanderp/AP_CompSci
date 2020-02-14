@@ -2,6 +2,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "CodeLens (Launch) - RemovingDuplicates",
+            "request": "launch",
+            "mainClass": "AP_CompSci/chapter14.RemovingDuplicates",
+            "projectName": "AP_CompSci"
+        },
+        {
+            "type": "java",
             "name": "CodeLens (Launch) - PhilSort2Tester",
             "request": "launch",
             "mainClass": "AP_CompSci/chapter14.PhilSort2Tester",

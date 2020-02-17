@@ -1,48 +1,52 @@
 package chapter14;
 
-import java.util.Random;
+import java.util.*;
 
 public class RemovingDuplicates {
-    public static int[][] AwithN;
-    public static void main (String [] args){
-        int [] arr = new int[50];
-        aInit(arr);
-        numOccurences(arr);
-        System.out.println(printAwithN());
-
+    public static void main(String[] args) {
+        int[] numbers = {2,2,7,1,9,5,5,10,1,6,2,6,3,3,1,9,6};
+        for (int i: numbers) System.out.print(i + ", ");
+        System.out.println();
+        int[] duplicateFreeByFrequency = frequencyDuplicates(numbers);
+        for (int i: duplicateFreeByFrequency) System.out.print(i + ", ");
+        System.out.println();
     }
 
-    public static void aInit(int [] a){
-        Random r = new Random();
-        for(int i =0; i< a.length; i++){
-            a[i] = r.nextInt(50)+1;
-        }
-    }
-
-    public static void numOccurences(int [] a){
-        AwithN = new int[a.length][2];
-        for(int i =0; i< a.length; i++){
-            AwithN[i][0] = a[i];
-        }
-        for(int i = 0; i<a.length;i++){
-            for(int j =1+i;j<a.length ; j++){
-                if(a[i] == a[j]){
-                    AwithN[i][1]++;
-                }
-
+    public static int[] frequencyDuplicates(int[] a){
+        ArrayList<Integer> values = new ArrayList<>();
+        for(int i: a){
+            int index = -1;
+            for(int j = 0; j<values.size() && index == -1; j++){
+                if( values.get(j) == i) index = j;
+            }
+            if(index == -1){
+                values.add(i);
             }
         }
+        a = new int[values.size()];
+        for (int i = 0; i < a.length; i++) {
+            a[i] = values.get(i);
+        }
+        return a;
     }
 
-    public static String printAwithN(){
-        String toReturn = "[ ";
-        for(int i =0; i<2; i++){
-            toReturn = "[ ";
-            for(int j = 0; i<AwithN.length;i++){
-                toReturn+=AwithN[j][i]+", ";
+    public static int[] sortedDuplicates(int[] a){
+        Arrays.sort(a);
+        int numberOfSolos =a.length;
+        for(int i = 1; i<a.length; i++){
+            if(a[i]==a[i-1]){
+                a[i-1]=-1;
+                numberOfSolos--;
             }
-            toReturn+=" ]";
         }
-        return toReturn;
+        int[] nonDuplicates = new int[numberOfSolos];
+        int index = 0;
+        for(int i: a){
+            if(i!=-1) {
+                nonDuplicates[index] = i;
+                index++;
+            }
+        }
+        return nonDuplicates;
     }
 }

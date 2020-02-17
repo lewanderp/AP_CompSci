@@ -27,6 +27,13 @@ public class LinearSearcher {
       }
       return -1;
    }
+   public boolean isFound(int v){
+      for (int i = 0; i < a.length; i++) {
+         if (a[i] == v)
+            return true;
+      }
+      return false;
+   }
 
    private int[] a;
 }

@@ -5,11 +5,16 @@ import java.util.*;
 public class RemovingDuplicates {
     public static void main(String[] args) {
         int[] numbers = {2,2,7,1,9,5,5,10,1,6,2,6,3,3,1,9,6};
-        for (int i: numbers) System.out.print(i + ", ");
+        for (int i: numbers) {
+            System.out.print(i + ", ");
+        }
         System.out.println();
         int[] duplicateFreeByFrequency = frequencyDuplicates(numbers);
-        for (int i: duplicateFreeByFrequency) System.out.print(i + ", ");
+        for (int i: duplicateFreeByFrequency) {
+            System.out.print(i + ", ");
+        }
         System.out.println();
+
     }
 
     public static int[] frequencyDuplicates(int[] a){

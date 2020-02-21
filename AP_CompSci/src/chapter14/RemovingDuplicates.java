@@ -14,6 +14,10 @@ public class RemovingDuplicates {
             System.out.print(i + ", ");
         }
         System.out.println();
+        int[] duplicateFreeByAdjacent = sortedDuplicates(numbers);
+        for(int i: duplicateFreeByAdjacent){
+            System.out.print(i + ", ");
+        }
 
     }
 

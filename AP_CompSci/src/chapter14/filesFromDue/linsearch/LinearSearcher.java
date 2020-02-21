@@ -4,12 +4,15 @@ package chapter14.filesFromDue.linsearch;
  * A class for executing linear searches through an array.
  */
 public class LinearSearcher {
+
+   public int comparasins;
    /**
     * Constructs the LinearSearcher.
     * 
     * @param anArray an array of integers
     */
    public LinearSearcher(int[] anArray) {
+      comparasins = 0;
       a = anArray;
    }
 
@@ -22,6 +25,7 @@ public class LinearSearcher {
     */
    public int search(int v) {
       for (int i = 0; i < a.length; i++) {
+         comparasins++;
          if (a[i] == v)
             return i;
       }
@@ -35,5 +39,18 @@ public class LinearSearcher {
       return false;
    }
 
+   public int getComparasins(){
+      return comparasins;
+   }
+
+   public String isFoundMessage(int v){
+      String s;
+      if(isFound(v)){
+         s = "Number " + v + " found at location " + search(v) + ". " + getComparasins() + " where made.";
+      } else {
+         s = "Number " + v + " was not found. " + getComparasins() + " comparasins where made.";
+      }
+      return s;
+   }
    private int[] a;
 }

@@ -2,6 +2,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "CodeLens (Launch) - QuizCreatorTester",
+            "request": "launch",
+            "mainClass": "AP_CompSci/cumulativeReview.QuizCreatorTester",
+            "projectName": "AP_CompSci"
+        },
+        {
+            "type": "java",
             "name": "CodeLens (Launch) - SearchComparasin",
             "request": "launch",
             "mainClass": "AP_CompSci/chapter14.SearchComparasin",

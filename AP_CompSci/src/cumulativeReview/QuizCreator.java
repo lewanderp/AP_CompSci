@@ -5,46 +5,51 @@ import java.util.*;
 public class QuizCreator{
 
     private int wrongCounter;
+    private int points;
     private Random r;
     private Scanner in;
 
     public QuizCreator(){
-        wrongCounter = 1;
+        wrongCounter = 0;
+        points = 0;
         r = new Random();
         in = new Scanner(System.in);
     }
 
-    public void Quiz(){
-        while (true){
-            if(startQuiz() == true){
-                System.out.println("Good job! You passed!");
-                return;
-            }
+    public boolean Quiz(){
+        if(startQuiz() == true){
+            System.out.println("Good job! You passed!");
+            return true;
         }
+        return false;
     }
 
     private boolean startQuiz(){
         System.out.println("Level 1");
         if(!lvl1()){
             System.out.println("You gotta start over!");
+            wrongCounter = 0;
             return false;
         }
         wrongCounter = 0;
         System.out.println("Level 2");
         if(!lvl2()){
             System.out.println("You gotta start over!");
+            wrongCounter = 0;
             return false;
         }
         wrongCounter = 0;
         System.out.println("Level 3");
         if(!lvl3()){
             System.out.println("You gotta start over!");
+            wrongCounter = 0;
             return false;
         }
         wrongCounter = 0;
         System.out.println("Level 4");
         if(!lvl4()){
             System.out.println("You gotta start over!");
+            wrongCounter = 0;
             return false;
         }
         wrongCounter = 0;
@@ -52,79 +57,113 @@ public class QuizCreator{
     }
 
     private boolean lvl1(){
-        int a = r.nextInt(10);
-        int b = r.nextInt(10);
         boolean correct = false;
-        System.out.println("What is: " + a + "+" + b);
-        while (wrongCounter < 2 && !correct){
-            int answer = in.nextInt();
-            if (answer != a+b){
-                wrongCounter++;
-                System.out.println("Thats Not Right!");
-            } else {
-                correct = true;
+        for(int i = 0; i<5; i++){
+            int a = r.nextInt(10);
+            int b = r.nextInt(10);
+            System.out.println("Points: " + points);
+            System.out.println("What is "+ a +"+"+ b + "?");
+            for(int j = 0; j<2; j++){
+                int answer = in.nextInt();
+                if(a+b==answer){
+                    correct = true;
+                    wrongCounter = 0;
+                    points++;
+                    break;
+                } else {
+                    System.out.println("That isn't right!");
+                    wrongCounter++;
+                }
+                if(wrongCounter >= 2){return false;}
             }
+            
         }
         return correct;
     }
 
     private boolean lvl2(){
-        int a = r.nextInt(10);
-        int b = r.nextInt(10);
         boolean correct = false;
-        System.out.println("What is: " + a + "-" + b);
-        while (wrongCounter < 2 && !correct){
-            int answer = in.nextInt();
-            if (answer != a-b){
-                wrongCounter++;
-                System.out.println("Thats Not Right!");
-            } else {
-                correct = true;
+        for(int i = 0; i<5; i++){
+            int a = r.nextInt(10);
+            int b = r.nextInt(10);
+            System.out.println("Points: " + points);
+            System.out.println("What is "+ a +"-"+ b + "?");
+            for(int j = 0; j<2; j++){
+                int answer = in.nextInt();
+                if(a-b==answer){
+                    correct = true;
+                    wrongCounter = 0;
+                    points++;
+                    break;
+                } else {
+                    System.out.println("That isn't right!");
+                    wrongCounter++;
+                }
+                if(wrongCounter >= 2){return false;}
             }
+            
         }
         return correct;
     }
 
     private boolean lvl3(){
-        if(lvl3Mult() == false){
-            return false;
+        boolean bool = r.nextBoolean();
+        if(bool){
+            return lvl3Mult();
+        } else {
+            return lvl3Div();
         }
-        if(lvl3Div() == false){
-            return false;
-        }
-        return true;
     }
 
     private boolean lvl3Mult(){
-        int a = r.nextInt(10);
-        int b = r.nextInt(10);
         boolean correct = false;
-        System.out.println("What is: " + a + "*" + b);
-        while (wrongCounter < 2 && !correct){
-            int answer = in.nextInt();
-            if (answer != a*b){
-                wrongCounter++;
-                System.out.println("Thats Not Right!");
-            } else {
-                correct = true;
+        for(int i = 0; i<5; i++){
+            int a = r.nextInt(10);
+            int b = r.nextInt(10);
+            System.out.println("Points: " + points);
+            System.out.println("What is "+ a +"*"+ b + "?");
+            for(int j = 0; j<2; j++){
+                int answer = in.nextInt();
+                if(a*b==answer){
+                    correct = true;
+                    wrongCounter = 0;
+                    points++;
+                    break;
+                } else {
+                    System.out.println("That isn't right!");
+                    wrongCounter++;
+                }
+                if(wrongCounter >= 2){return false;}
             }
+            
         }
         return correct;
     }
 
-    private boolean lvl3Div(){
-        int a = r.nextInt(10);
-        int b = r.nextInt(10);
+    private boolean lvl3Div(){ 
         boolean correct = false;
-        System.out.println("What is: " + a + "/" + b);
-        while (wrongCounter < 2 && !correct){
-            int answer = in.nextInt();
-            if (answer != a/b){
-                wrongCounter++;
-                System.out.println("Thats Not Right!");
-            } else {
-                correct = true;
+        for(int i = 0; i<5; i++){
+            int a = r.nextInt(10);
+            int b = r.nextInt(10);
+            while(!isFactor(a, b)){
+                b = r.nextInt(10);
             }
+            System.out.println("Points: " + points);
+            System.out.println("What is "+ a +"/"+ b + "?");
+            for(int j = 0; j<2; j++){
+                int answer = in.nextInt();
+                if(a/b==answer){
+                    correct = true;
+                    wrongCounter = 0;
+                    points++;
+                    break;
+                } else {
+                    System.out.println("That isn't right!");
+                    wrongCounter++;
+                }
+                if(wrongCounter >= 2){return false;}
+            }
+            
         }
         return correct;
     }
@@ -143,4 +182,11 @@ public class QuizCreator{
         }
         return false;
     }
+
+    private static boolean isFactor(int number, int div) {
+        if (number % div == 0) {
+            return true;
+        }
+	    return false;
+	}
 }

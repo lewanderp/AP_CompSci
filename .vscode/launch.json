@@ -2,6 +2,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "CodeLens (Launch) - TextIO",
+            "request": "launch",
+            "mainClass": "AP_CompSci/funWithStrings.TextIO",
+            "projectName": "AP_CompSci"
+        },
+        {
+            "type": "java",
             "name": "CodeLens (Launch) - QuizCreatorTester",
             "request": "launch",
             "mainClass": "AP_CompSci/cumulativeReview.QuizCreatorTester",

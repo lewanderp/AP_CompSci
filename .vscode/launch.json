@@ -2,6 +2,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "CodeLens (Launch) - PrintFileInfo",
+            "request": "launch",
+            "mainClass": "AP_CompSci/funWithStrings.PrintFileInfo",
+            "projectName": "AP_CompSci"
+        },
+        {
+            "type": "java",
             "name": "CodeLens (Launch) - TextIO",
             "request": "launch",
             "mainClass": "AP_CompSci/funWithStrings.TextIO",

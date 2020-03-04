@@ -2,6 +2,34 @@
     "configurations": [
         {
             "type": "java",
+            "name": "CodeLens (Launch) - encodeTester",
+            "request": "launch",
+            "mainClass": "AP_CompSci/funWithStrings.encodeTester",
+            "projectName": "AP_CompSci"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - encode",
+            "request": "launch",
+            "mainClass": "AP_CompSci/funWithStrings.encode",
+            "projectName": "AP_CompSci"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - encrypt",
+            "request": "launch",
+            "mainClass": "AP_CompSci/funWithStrings.encrypt",
+            "projectName": "AP_CompSci"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - GibberishConversion",
+            "request": "launch",
+            "mainClass": "AP_CompSci/funWithStrings.GibberishConversion",
+            "projectName": "AP_CompSci"
+        },
+        {
+            "type": "java",
             "name": "CodeLens (Launch) - PrintFileInfo",
             "request": "launch",
             "mainClass": "AP_CompSci/funWithStrings.PrintFileInfo",

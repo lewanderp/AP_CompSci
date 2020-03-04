@@ -31,10 +31,8 @@ public class PrintFileInfo {
                 }
                 if(!st.isEmpty()){
                     wordCount++;
-                    System.out.println("content");
                 } else {
                     wordCount-=2;
-                    System.out.println("empty");
                 }
             }
         } catch (FileNotFoundException e) {

@@ -9,10 +9,11 @@ public class P11_2{
         //C:\\Users\\swedi\\Documents\\GitHub\\AP_CompSci\\AP_CompSci\\src\\funWithStrings\\Shakeaspere.txt
         //C:\\Users\\swedi\\Documents\\GitHub\\AP_CompSci\\AP_CompSci\\src\\funWithStrings\\Shakeaspere2.txt
         //C:\\Users\\swedi\\Documents\\GitHub\\AP_CompSci\\AP_CompSci\\src\\funWithStrings\\Shakeaspere3.txt
-        while(PrintFileInfo.hasBeenReturned()){
+        while(!PrintFileInfo.hasBeenReturned()){
             String fn = in.next();
             PrintFileInfo pfi = new PrintFileInfo(fn);
-            System.out.println(pfi);
+            System.out.println(pfi.printFileInfoInit());
         }
+        in.close();
     }
 }

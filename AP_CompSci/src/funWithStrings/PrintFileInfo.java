@@ -50,23 +50,27 @@ public class PrintFileInfo {
         }
         return toPrintFileInfo();
     }
-    public String toPrintFileInfo(){
+    private String toPrintFileInfo(){
         String toReturn = "";
         toReturn += "__________________________________\n";
         toReturn += "\nFile Name: " + fileName;
         toReturn += "\nNumber of lines: " + numLine;
         toReturn += "\nNumber of characters: " + charCount;
         toReturn += "\nNumber of words: " + wordCount;
-        toReturn += "__________________________________\n";
+        toReturn += "\n__________________________________\n";
         return toReturn;
     }
-    public String toPrintTotalFileInfo(){
+    public String toString(){
+        return toPrintFileInfo();
+    }
+
+    public static String toPrintTotalFileInfo() {
         String toReturn = "";
-        toReturn += "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n";
-        toReturn += "Total num lines: " + numLineSum;
-        toReturn += "Total num charecters: " + charCountSum;
-        toReturn += "Total num words: " + wordCountSum;
-        toReturn += "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n";
+        toReturn += "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~";
+        toReturn += "\nTotal num lines: " + numLineSum;
+        toReturn += "\nTotal num charecters: " + charCountSum;
+        toReturn += "\nTotal num words: " + wordCountSum;
+        toReturn += "\n~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n";
         return toReturn;
     }
     public static boolean isSpace(char c){

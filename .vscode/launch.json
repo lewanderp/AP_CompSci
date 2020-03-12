@@ -2,6 +2,20 @@
     "configurations": [
         {
             "type": "java",
+            "name": "CodeLens (Launch) - P11_11",
+            "request": "launch",
+            "mainClass": "AP_CompSci/funWithStrings.P11_11",
+            "projectName": "AP_CompSci"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - P11_2",
+            "request": "launch",
+            "mainClass": "AP_CompSci/funWithStrings.P11_2",
+            "projectName": "AP_CompSci"
+        },
+        {
+            "type": "java",
             "name": "CodeLens (Launch) - encodeTester",
             "request": "launch",
             "mainClass": "AP_CompSci/funWithStrings.encodeTester",

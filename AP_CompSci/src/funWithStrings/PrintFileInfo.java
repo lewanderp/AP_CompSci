@@ -1,22 +1,26 @@
 package funWithStrings;
 
 import java.io.*;
-import java.util.*;
 
 public class PrintFileInfo {
-    public static void main(String[] args) throws IOException {
-        Scanner in = new Scanner(System.in);
-        // C:\\Users\\swedi\\Documents\\GitHub\\AP_CompSci\\AP_CompSci\\src\\funWithStrings\\Seuss.txt
-        
-        String fileName = in.next();
-        File file = new File(fileName);
-        BufferedReader br;
+
+    private String fileName;
+    private File file;
+    private int numLine;
+    private int charCount;
+    private int wordCount;
+    private static int numLineSum;
+    private static int charCountSum;
+    private static int wordCountSum;
+    private static boolean hasBeenReturned = false;
+    private BufferedReader br;
+    public PrintFileInfo(String fn){
+        fileName = fn;
+        file = new File(fn);
+    }
+    public String printFileInfoInit(){
         String st ;
         String str = "";
-        System.out.println();
-        int numLine = 0;
-        int charCount = 0;
-        int wordCount = 0;
         try {
             br = new BufferedReader(new FileReader(file));
             while ((st = br.readLine()) != null){
@@ -35,20 +39,43 @@ public class PrintFileInfo {
                     wordCount-=2;
                 }
             }
+            numLineSum += numLine;
+            charCountSum += charCount;
+            wordCountSum += wordCount;
         } catch (FileNotFoundException e) {
+            hasBeenReturned = true;
+            return toPrintTotalFileInfo();
+        } catch (IOException e) {
             e.printStackTrace();
         }
-        System.out.println(str);
-        System.out.println("__________________________________\n");
-        System.out.println("Number of lines: " + numLine);
-        System.out.println("Number of characters: " + charCount);
-        System.out.println("Number of words: " + wordCount);
-        in.close();
+        return toPrintFileInfo();
+    }
+    public String toPrintFileInfo(){
+        String toReturn = "";
+        toReturn += "__________________________________\n";
+        toReturn += "\nFile Name: " + fileName;
+        toReturn += "\nNumber of lines: " + numLine;
+        toReturn += "\nNumber of characters: " + charCount;
+        toReturn += "\nNumber of words: " + wordCount;
+        toReturn += "__________________________________\n";
+        return toReturn;
+    }
+    public String toPrintTotalFileInfo(){
+        String toReturn = "";
+        toReturn += "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n";
+        toReturn += "Total num lines: " + numLineSum;
+        toReturn += "Total num charecters: " + charCountSum;
+        toReturn += "Total num words: " + wordCountSum;
+        toReturn += "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n";
+        return toReturn;
     }
     public static boolean isSpace(char c){
         if (c == 32){
             return true;
         }
         return false;
+    }
+    public static boolean hasBeenReturned(){
+        return hasBeenReturned;
     }
 }

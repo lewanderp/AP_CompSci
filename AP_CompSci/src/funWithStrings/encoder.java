@@ -21,7 +21,7 @@ public class encoder {
         writeKeyFile();
     }
 
-    public String getToEncode(){
+    public String getToEncode() {
         return toEncode;
     }
 
@@ -39,9 +39,10 @@ public class encoder {
     }
 
     private String[][] genKey() {
-        String [][] key = new String[2][26];
+        String[][] key = new String[2][26];
         for (int i = 0; i < key[0].length; i++) {
-            String s = r.nextInt(10) + "" + r.nextInt(10) + "" + r.nextInt(10) + "" + r.nextInt(10) + "" + r.nextInt(10);
+            String s = r.nextInt(10) + "" + r.nextInt(10) + "" + r.nextInt(10) + "" + r.nextInt(10) + ""
+                    + r.nextInt(10);
             key[0][i] = s;
         }
         int cc = 0;
@@ -93,11 +94,10 @@ public class encoder {
     }
 
     private void writeKeyFile() throws IOException {
-        fstream = new FileWriter("C:\\Users\\swedi\\Documents\\GitHub\\AP_CompSci\\AP_CompSci\\src\\funWithStrings\\eKey.txt");
+        fstream = new FileWriter(
+                "C:\\Users\\swedi\\Documents\\GitHub\\AP_CompSci\\AP_CompSci\\src\\funWithStrings\\eKey.txt");
         BufferedWriter out = new BufferedWriter(fstream);
         out.write(eKeyToString(eKey));
         out.close();
     }
-
-    
 }

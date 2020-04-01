@@ -44,4 +44,9 @@ public class card implements Comparable {
         }
         return false;
     }
+
+    @Override
+    public String toString(){
+        return "[" + rank + ", " + suit + ", " + value + "]";
+    }
 }

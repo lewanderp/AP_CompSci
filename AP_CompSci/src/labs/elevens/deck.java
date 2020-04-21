@@ -52,4 +52,15 @@ public class deck {
     public card getCard(int index) {
         return cards.get(index);
     }
+
+	public boolean isEmpty() {
+		if(deckSize == 0){
+            return true;
+        }
+        return false;
+	}
+
+	public int size() {
+		return deckSize;
+	}
 }

@@ -193,9 +193,9 @@ public class elevensBoard {
 	 * @return true if the selected card form a valid group for removal;
 	 *         false otherwise.
 	 */
-	public boolean isLegal(List<Integer> selectedCards) {
+	//public boolean isLegal(List<Integer> selectedCards) {
 		/* *** TO BE IMPLEMENTED IN ACTIVITY 9 *** */
-	}
+	//}
 
 	/**
 	 * Determine if there are any legal plays left on the board.
@@ -205,9 +205,9 @@ public class elevensBoard {
 	 * @return true if there is a legal play left on the board;
 	 *         false otherwise.
 	 */
-	public boolean anotherPlayIsPossible() {
-		/* *** TO BE IMPLEMENTED IN ACTIVITY 9 *** */
-    }
+	// public boolean anotherPlayIsPossible() {
+	// 	/* *** TO BE IMPLEMENTED IN ACTIVITY 9 *** */
+    // }
 
 
 	/**
@@ -227,9 +227,9 @@ public class elevensBoard {
 	 * @return true if the board entries in selectedCards
 	 *              contain an 11-pair; false otherwise.
 	 */
-	private boolean containsPairSum11(List<Integer> selectedCards) {
-		/* *** TO BE IMPLEMENTED IN ACTIVITY 9 *** */
-	}
+	// private boolean containsPairSum11(List<Integer> selectedCards) {
+	// 	/* *** TO BE IMPLEMENTED IN ACTIVITY 9 *** */
+	// }
 
 	/**
 	 * Check for a JQK in the selected card.
@@ -239,7 +239,7 @@ public class elevensBoard {
 	 * @return true if the board entries in selectedCards
 	 *              include a jack, a queen, and a king; false otherwise.
 	 */
-	private boolean containsJQK(List<Integer> selectedCards) {
-		/* *** TO BE IMPLEMENTED IN ACTIVITY 9 *** */
-	}
+	// private boolean containsJQK(List<Integer> selectedCards) {
+	// 	/* *** TO BE IMPLEMENTED IN ACTIVITY 9 *** */
+	// }
 }

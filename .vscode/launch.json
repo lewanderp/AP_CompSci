@@ -2,6 +2,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "CodeLens (Launch) - DaysNews",
+            "request": "launch",
+            "mainClass": "AP_CompSci/finalProgram.DaysNews",
+            "projectName": "AP_CompSci"
+        },
+        {
+            "type": "java",
             "name": "CodeLens (Launch) - Theatre",
             "request": "launch",
             "mainClass": "AP_CompSci/dataStructures.Theatre",
